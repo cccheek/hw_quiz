@@ -1,6 +1,8 @@
 body {
   background-color:lavender;
-  border-style: solid;
-  border-color: darkgray;
-  border-width: 5px;
+}
+
+.jumbotron{
+  margin: 0 auto;
+  display: block;
 }
