@@ -2,7 +2,19 @@ body {
   background-color:lavender;
 }
 
-.jumbotron{
-  margin: 0 auto;
+.game-descript{
+  text-align: center;
+}
+.simple{
+  text-align: center;
+}
+.timed{
+  text-align: center;
+}
+#start{
   display: block;
+  margin: 0 auto;
+}
+.time{
+  text-align: center;
 }
