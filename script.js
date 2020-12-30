@@ -1,18 +1,14 @@
 
 
-//create opening screen welcoming user to quiz
-//create button to start quiz
+//create opening screen welcoming user to quiz with start button
+//create button to start quiz in html
 //TODO: create function that presents question and answers when "start quiz" button is pushed
-var startBtn = document.querySelector("#start")
+var startBtn = document.querySelector("#start-button")
+var startQuiz = document.querySelector("#start-quiz")
 
-startBtn.addEventListener("click", function(){
-   console.log("start!")
-
-})
-
-
-
-
+startBtn.addEventListener("click", function(event){
+  
+   // console.log("start!")
 
 
 // function startQuiz()
@@ -20,35 +16,29 @@ startBtn.addEventListener("click", function(){
 // create five questions with four possible answers and correct answer
 var questionsAndAnswerOb = [
    {
-
-      question1: `Who said “I’m trying very hard not to connect with people right now.”`,
-      answers1: ["Alexis", "David", "Moira", "Stevie"],
-      correct1: "David"
+      question: `Who said “I’m trying very hard not to connect with people right now.”`,
+      answer: ["Alexis", "David", "Moira", "Stevie"],
+      correct: "David"
    },
    {
-
-      question2: `Who said “Oh, I’d kill for a good coma right now.”`,
-      answers2: ["David", "Moira", "Stevie", "Johnny"],
-      correct2: "Moira"
+      question: `Who said “Oh, I’d kill for a good coma right now.”`,
+      answer: ["David", "Moira", "Stevie", "Johnny"],
+      correct: "Moira"
    },
    {
-
-      question3: `Who said "But people love extreme vanity! And they love puppies!"`,
-      answers3: ["Alexis", "David", "Moira", "Johnny"],
-      correct3: "Alexis"
+      question: `Who said "But people love extreme vanity! And they love puppies!"`,
+      answer: ["Alexis", "David", "Moira", "Johnny"],
+      correct: "Alexis"
    },
    {
-
-      question4: `Who said "Hashtag, is that two words?"`,
-      answers4: ["Moira", "Stevie", "Johnny", "Alexis"],
-      correct4: "Johnny"
+      question: `Who said "Hashtag, is that two words?"`,
+      answer: ["Moira", "Stevie", "Johnny", "Alexis"],
+      correct: "Johnny"
    },
    {
-
-
-      question5: `Who said "I'm incapable of faking sincerity."`,
-      answers5: ["Alexis", "David", "Moira", "Stevie"],
-      correct5: "Stevie"
+      question: `Who said "I'm incapable of faking sincerity."`,
+      answer: ["Alexis", "David", "Moira", "Stevie"],
+      correct: "Stevie"
    }
 ];
 

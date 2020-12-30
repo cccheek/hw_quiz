@@ -1,20 +1,34 @@
 body {
   background-color:lavender;
 }
-
-.game-descript{
+#game-descript{
   text-align: center;
 }
-.simple{
+.start-page{
   text-align: center;
 }
-.timed{
-  text-align: center;
-}
-#start{
+#start-button{
   display: block;
   margin: 0 auto;
 }
 .time{
   text-align: center;
+}
+#correct-answer{
+  text-align: center;
+}
+#questionAnswer{
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+#question-body{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+#answer{
+  display: block;
+  margin: 0 auto;
 }
