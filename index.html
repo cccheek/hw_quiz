@@ -20,29 +20,34 @@
     <div id="start-page">
         <h2 class="start-page">The game is pretty simple, who said what?</h2>
         <h3 class="start-page">You will be timed, you won't be judged.</h3>
-     <!-----start quiz button -->
+        <!-----start quiz button -->
         <button id="start-button" type="button" class="btn btn-secondary">Let's start!</button>
     </div>
 
     <!-- -----where question is presented-->
     <div id="question-body">
-        <p id="question-text">this is where the question goes</p>
+        <div>
+            <h2 id="question-number">
+
+            </h2>
+            <p id="question-text">this is where the question goes</p>
+        </div>
     </div>
-    
-    <!-------------where answers are presented-->
-    <div id="answer-body" class="answer">
-            <button id="answer1" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>
-            <button id="answer2" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>
-            <button id="answer3" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>
-            <button id="answer4" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>    
-    </div>
+
+        <!-------------where answers are presented-->
+        <div id="answer-body" class="answer">
+            <button id="answer1" type="button" class="btn btn-secondary"> </button><br>
+            <button id="answer2" type="button" class="btn btn-secondary"> </button><br>
+            <button id="answer3" type="button" class="btn btn-secondary"> </button><br>
+            <button id="answer4" type="button" class="btn btn-secondary"> </button><br>
+        </div>
     <!-------correct answer-->
     <div id="correct-answer">
         <p>correct answer</p>
     </div>
     <!--------timer-->
-    <h1 class="time" id="countdown">sec</h1>
-    <h2 class="time">left bebe!</h2>
+    <h1 class="time" id="countdown"></h1>
+    <h2 class="time">seconds left bebe!</h2>
     <!---------score page-->
     <div id="score-page">
         <ul>
