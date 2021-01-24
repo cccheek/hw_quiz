@@ -1,20 +1,25 @@
 
 
-//create opening screen welcoming user to quiz with start button
-//create button to start quiz in html
-//TODO: create function that presents question and answers when "start quiz" button is pushed
-var startBtn = document.querySelector("#start-button")
-var startQuiz = document.querySelector("#start-quiz")
+var startPage = document.querySelector("#start-page");
+var startBtn = document.querySelector("#start-button");
+var questionBody = document.querySelector("#question-body");
+var questionText = document.querySelector("#question-text")
+var answerBody = document.querySelector("#answer-body");
+var correctAnswer = document.querySelector("#correct-answer");
+var answer1 = document.querySelector("#answer1")
+var answer2 = document.querySelector("#answer2")
+var answer3 = document.querySelector("#answer3")
+var answer4 = document.querySelector("#answer4")
+var scorePage = document.querySelector("#score-page")
+var timer = document.querySelector("#time")
 
-startBtn.addEventListener("click", function(event){
-  
-   // console.log("start!")
-
-
-// function startQuiz()
+var gameTimer;
+var questionCount = 0;
+var score = 0;
+var wrongAns = 0;
 
 // create five questions with four possible answers and correct answer
-var questionsAndAnswerOb = [
+var questionAndAnswerOb = [
    {
       question: `Who said “I’m trying very hard not to connect with people right now.”`,
       answer: ["Alexis", "David", "Moira", "Stevie"],
@@ -31,49 +36,25 @@ var questionsAndAnswerOb = [
       correct: "Alexis"
    },
    {
-      question: `Who said "Hashtag, is that two words?"`,
-      answer: ["Moira", "Stevie", "Johnny", "Alexis"],
-      correct: "Johnny"
-   },
-   {
-      question: `Who said "I'm incapable of faking sincerity."`,
-      answer: ["Alexis", "David", "Moira", "Stevie"],
-      correct: "Stevie"
-   }
+       question: `Who said "Hashtag, is that two words?"`,
+       answer: ["Moira", "Stevie", "Johnny", "Alexis"],
+       correct: "Johnny"
+    },
+    {
+        question: `Who said "I'm incapable of faking sincerity."`,
+        answer: ["Alexis", "David", "Moira", "Stevie"],
+        correct: "Stevie"
+    }
 ];
 
+startBtn.addEventListener("click", beginQuiz);
 
-var quizBodyDiv = document.getElementById("")
+function beginQuiz() {
 
+   //hide start page
+   startPage.style.display = "none";
 
+   // display question page
+   questionBody.style.display = "block";
 
-//TODO: create a timer set to start when user starts quiz
-
-// var timeEl = document.body.children[5]
-// var secondsLeft = 60;
-
-// function setTimer() {
-//    //create countdown timer
-//    var countDown = setInterval(function (){
-//       //countdown
-//       secondsLeft--;
-//       //display on page
-//       // timeEl.textContent = secondsLeft;
-//       //stops timer at 0
-//       if (secondsLeft === 0) {
-//          clearInterval(countDown);
-         
-//       }
-//       //counts by 1 second
-//    }, 1000);
-
-// }
-// //calls the setTimer function
-// setTimer();
-
-    //TODO: when user gets question wrong take 5 seconds from timer
-        //TODO:when user gets question right give 5 seconds to timer
-
-
-//TODO:create scoreboard
-        //TODO: log users score to local and post to scoreboard
+};

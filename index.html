@@ -12,15 +12,15 @@
 </head>
 
 <body>
-    <!--------------jumbotron for welcome and start-->
+    <!--------------jumbotron-->
     <div class="jumbotron">
         <h1 id="game-descript">Who said what in Schitt's Creek?</h1>
     </div>
-
-    <div id="start-quiz">
+    <!------start quiz page-->
+    <div id="start-page">
         <h2 class="start-page">The game is pretty simple, who said what?</h2>
         <h3 class="start-page">You will be timed, you won't be judged.</h3>
-        <!-----start quiz button -->
+     <!-----start quiz button -->
         <button id="start-button" type="button" class="btn btn-secondary">Let's start!</button>
     </div>
 
@@ -29,21 +29,26 @@
         <p id="question-text">this is where the question goes</p>
     </div>
     
-        <!-------------where answers are presented-->
-    <div id="answer-body">
-            <button id="answer" type="button" class="btn btn-secondary">this is where the answer goes</button><br>
-            <button id="answer" type="button" class="btn btn-secondary">this is where the answer goes</button><br>
-            <button id="answer" type="button" class="btn btn-secondary">this is where the answer goes</button><br>
-            <button id="answer" type="button" class="btn btn-secondary">this is where the answer goes</button><br>    
+    <!-------------where answers are presented-->
+    <div id="answer-body" class="answer">
+            <button id="answer1" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>
+            <button id="answer2" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>
+            <button id="answer3" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>
+            <button id="answer4" type="button" class="btn btn-secondary answer">this is where the answer goes</button><br>    
     </div>
     <!-------correct answer-->
     <div id="correct-answer">
         <p>correct answer</p>
     </div>
     <!--------timer-->
-    <h1 class="time">sec</h1>
+    <h1 class="time" id="countdown">sec</h1>
     <h2 class="time">left bebe!</h2>
+    <!---------score page-->
+    <div id="score-page">
+        <ul>
 
+        </ul>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
