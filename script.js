@@ -76,19 +76,6 @@ var qAndA = [
 ];
 
 
-
-// function init() {
-//    var storedBebes = JSON.parse(localStorage.getitem("bebeVal"));
-
-//    if (storedBebes !== null){
-//       bebeVal.push(storedBebes);
-//    } else {
-//       return
-//    }
-// };
-// init();
-
-
 // timer
 function setTimer() {
    //create countdown timer
