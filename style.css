@@ -11,8 +11,9 @@ body {
   display: block;
   margin: 0 auto;
 }
-.time{
+#countdown{
   text-align: center;
+ 
 }
 #correct-answer{
   text-align: center;
@@ -32,6 +33,15 @@ body {
   margin: 0 auto;
 }
 
-/* .answer{
+.answer-body{
   display: none;
-} */
+}
+
+#score {
+  text-align: center;
+}
+
+#score-page {
+  display: none;
+  text-align: center;
+}

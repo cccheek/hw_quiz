@@ -25,13 +25,15 @@
     </div>
 
     <!-- -----where question is presented-->
-    <div id="question-body">
-        <div>
+    <div id="question-body" class="question">
+        
             <h2 id="question-number">
 
             </h2>
-            <p id="question-text">this is where the question goes</p>
-        </div>
+            <p id="question-text">
+
+            </p>
+        
     </div>
 
         <!-------------where answers are presented-->
@@ -41,18 +43,21 @@
             <button id="answer3" type="button" class="btn btn-secondary"> </button><br>
             <button id="answer4" type="button" class="btn btn-secondary"> </button><br>
         </div>
-    <!-------correct answer-->
-    <div id="correct-answer">
-        <p>correct answer</p>
-    </div>
     <!--------timer-->
-    <h1 class="time" id="countdown"></h1>
-    <h2 class="time">seconds left bebe!</h2>
+    <h1 id="countdown"></h1>
     <!---------score page-->
-    <div id="score-page">
-        <ul>
+    <div id="score">
+        
+    </div>
 
-        </ul>
+    <div id="score-page">
+        <form>
+            <input id="bebe-name-input" type="text" placeholder="Your name bebe?">
+            <br>
+            <button type="submit" id="submit-btn" class="btn btn-secondary">Thx Bebe!</button>
+        </form>
+        <span id="final"></span><br><br>
+        <span id="bebe-name"></span>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
