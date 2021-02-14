@@ -21,6 +21,7 @@ var wrongAns = 0;
 
 var bebeVal = JSON.parse(localStorage.getItem("bebeVal") || "[]");
 
+
 // create five questions with four possible answers and correct answer
 var qAndA = [
    {
@@ -39,55 +40,56 @@ var qAndA = [
       correct: "Alexis"
    },
    {
-       question: `Who said "Hashtag, is that two words?"`,
-       answer: ["Moira", "Stevie", "Johnny", "Alexis"],
-       correct: "Johnny"
-    },
-    {
-        question: `Who said "I'm incapable of faking sincerity."`,
-        answer: ["Alexis", "David", "Moira", "Stevie"],
-        correct: "Stevie"
-    },
-    {
-        question: `Who said "Ahhhh EAT GLASS!"`,
-        answer: ["Stevie", "David", "Johnny", "Moira"],
-        correct: "David"
-    },
-    {
-        question: `Who said "You are my Mariah"`,
-        answer: ["David", "Alexis", "Patrick", "Moira"],
-        correct: "Patrick"
-    },
-    {
-        question: `Who said "Like Beyonce, I excel as a solo artist."`,
-        answer: ["David", "Stevie", "Patrick", "Moira"],
-        correct: "David"
-    },
-    {
-        question: `Who said "I won't wear anything with an adhesive backing."`,
-        answer: ["Alexis", "David", "Moira", "Johnny"],
-        correct: "Moira"
-    },
-    {
-        question: `Who said "Do I wear my fringed vest? Or, more importantly, do I wear anything under it?"`,
-        answer: ["Moira", "Patrick", "Alexis", "Johnny"],
-        correct: "Partick"
-    }
+      question: `Who said "Hashtag, is that two words?"`,
+      answer: ["Moira", "Stevie", "Johnny", "Alexis"],
+      correct: "Johnny"
+   },
+   {
+      question: `Who said "I'm incapable of faking sincerity."`,
+      answer: ["Alexis", "David", "Moira", "Stevie"],
+      correct: "Stevie"
+   },
+   {
+      question: `Who said "Mmmmmm eat glass!"`,
+      answer: ["Stevie", "David", "Johnny", "Moira"],
+      correct: "David"
+   },
+   {
+      question: `Who said "You are my Mariah"`,
+      answer: ["David", "Alexis", "Patrick", "Moira"],
+      correct: "Patrick"
+   },
+   {
+      question: `Who said "Like Beyonce, I excel as a solo artist."`,
+      answer: ["David", "Stevie", "Patrick", "Moira"],
+      correct: "David"
+   },
+   {
+      question: `Who said "I won't wear anything with an adhesive backing."`,
+      answer: ["Alexis", "David", "Moira", "Johnny"],
+      correct: "Moira"
+   },
+   {
+      question: `Who said "Do I wear my fringed vest? Or, more importantly, do I wear anything under it?"`,
+      answer: ["Moira", "Patrick", "Alexis", "Johnny"],
+      correct: "Patrick"
+   }
 ];
 
 
 // timer
 function setTimer() {
    //create countdown timer
-   var countDown = setInterval(function (){
-      if (secondsLeft <0){
+   var countDown = setInterval(function () {
+      if (secondsLeft < 0) {
          secondsLeft = 0
-      } else if (secondsLeft >0) {
-         document.getElementById("countdown").innerHTML = secondsLeft+ " seconds left bebe!";
+      } else if (secondsLeft > 0) {
+         answerBody.style.display = "block";
+         document.getElementById("countdown").innerHTML = secondsLeft + " seconds left bebe!";
          secondsLeft--;
       } else {
          clearInterval(countDown);
-         document.getElementById("score").innerHTML = "You got " +score+ " right!"
+         document.getElementById("score").innerHTML = "You got " + score + " right!"
          //show score input
          bebeInfo.style.display = "block";
          //hide everything else
@@ -101,33 +103,33 @@ function setTimer() {
       if (wrongAns === 1) {
          secondsLeft -= 5;
          wrongAns--;
-     }
+      }
 
       //counts by 1 second
    }, 1000);
 
-   
+
 }
 
 //start timer and hides start page when quiz has begun
 function beginQuiz() {
-   
+
    //hide start page
    startPage.style.display = "none";
-   
+
    // display question page
    questionBody.style.display = "block";
    qText.style.display = "block";
 
    //start timer
    setTimer();
-   
+
    //populate questions
    askQuestion();
-   
+
    //listen for clicks
    answerListen();
-   
+
 };
 
 //listening to start quiz button
@@ -148,9 +150,9 @@ function answerListen() {
          wrongAns++;
          askQuestion();
       }
-      
+
    });
-   
+
    answer2.addEventListener("click", function () {
       var userChoice = this.innerHTML;
       var correctA = qAndA[questionNext - 1].correct;
@@ -162,9 +164,9 @@ function answerListen() {
          wrongAns++;
          askQuestion();
       }
-      
+
    });
-   
+
    answer3.addEventListener("click", function () {
       var userChoice = this.innerHTML;
       var correctA = qAndA[questionNext - 1].correct;
@@ -176,9 +178,9 @@ function answerListen() {
          wrongAns++;
          askQuestion();
       }
-      
+
    });
-   
+
    answer4.addEventListener("click", function () {
       var userChoice = this.innerHTML;
       var correctA = qAndA[questionNext - 1].correct;
@@ -189,14 +191,14 @@ function answerListen() {
          wrongAns++;
          askQuestion();
       }
-      
+
    });
-   
+
 };
 
 // move to next question
 function askQuestion() {
-   
+
    //present question text
    qText.textContent = qAndA[questionNext].question;
    //presents question number above q
@@ -204,29 +206,32 @@ function askQuestion() {
 
    //loop to update answer buttons
    for (i = 0; i < 4; i++) {
-       //target button
-       var button = document.querySelector("#answer" + (i + 1));
-       //update text
-       button.textContent = qAndA[questionNext].answer[i];
+      //target button
+      var button = document.querySelector("#answer" + (i + 1));
+      //update text
+      button.textContent = qAndA[questionNext].answer[i];
    }
 
    questionNext++;
 
 }
 
-bebeNameBtn.addEventListener("click", function(){
-   event.preventDefault();
+bebeNameBtn.addEventListener("click", function () {
+   // event.preventDefault();
 
-var bebeObject ={
-   bebeName: bebeNameInput.value,
-   bebeScore: score
-};
-//push user obj to user val array
-bebeVal.push(bebeObject);
+   var bebeObject = {
+      bebeName: bebeNameInput.value,
+      bebeScore: score
+   };
+   //push user obj to user val array
+   bebeVal.push(bebeObject);
 
-//save user obj to local storage
-localStorage.setItem("bebeVal", JSON.stringify(bebeVal));
+   //save user obj to local storage
+   localStorage.setItem("bebeVal", JSON.stringify(bebeVal));
+   console.log(localStorage)
 
-// i++
+
 
 })
+
+

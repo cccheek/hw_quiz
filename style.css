@@ -33,7 +33,7 @@ body {
   margin: 0 auto;
 }
 
-.answer-body{
+#answer-body{
   display: none;
 }
 
